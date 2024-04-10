@@ -1,0 +1,25 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui o espaço entre as caixas */
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.box {
+    width: calc(25% - 20px); /* Calcula a largura das caixas, com margem à direita */
+    margin-bottom: 20px;
+    background-color: #80bfff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .box {
+        width: calc(50% - 20px); /* Em telas menores, duas caixas por linha */
+    }
+}
+@media (max-width: 480px) {
+    .box {
+        width: calc(100% - 20px); /* Em telas muito pequenas, uma caixa por linha */
+    }
+}
